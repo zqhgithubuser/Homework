@@ -27,100 +27,99 @@
 ![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231114230942.png)
 
 2. 选择"自定义安装"，点击 "下一步"
-![[Pasted image 20231115141942.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115141942.png)
 
 3. "硬件兼容性" 默认，点击 "下一步"
-![[Pasted image 20231115142255.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115142255.png)
 
 4. 选择 "稍后安装操作系统"，点击 "下一步"
-![[Pasted image 20231115142427.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115142427.png)
 
 5. 客户机操作系统选择 "Linux"，版本选择 "Ubuntu 64 位"，点击 "下一步"
-![[Pasted image 20231115142612.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115142612.png)
 
 6. 填写 "虚拟机名称"，选择虚拟机目录存放的 "位置"，点击 "下一步"
-![[Pasted image 20231115142914.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115142914.png)
 
 7. 选择 "处理器数量"，点击 "下一步"
-![[Pasted image 20231115143006.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115143006.png)
 
 
 8. "此虚拟机的内存" 填写 2048 MB，点击 "下一步"
-![[Pasted image 20231115143317.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115143317.png)
 
 9. "网络类型" 选择 "使用网络地址转换(NAT)"，点击 "下一步"
-
-![[Pasted image 20231115143741.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115143741.png)
 
 10. "SCSI 控制器" 默认，点击 "下一步"
-![[Pasted image 20231115144642.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115144642.png)
 
 11. "虚拟磁盘类型" 默认，点击 "下一步"
-![[Pasted image 20231115144719.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115144719.png)
 
 12. 选择 "创建新虚拟磁盘"，点击 "下一步"
-![[Pasted image 20231115144954.png |650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115144954.png)
 
 12. "最大磁盘大小" 填写 "100GB"，不要勾选 "立即分配所有磁盘空间"，点击 "下一步"
-![[Pasted image 20231115145242.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115145242.png)
 
 13. "磁盘文件" 名默认，点击 "下一步"
-![[Pasted image 20231115145329.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115145329.png)
 
 14. 点击 "完成"
-![[Pasted image 20231115145403.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115145403.png)
 
 #### 安装操作系统
 
 1. 点击 "编辑虚拟机设置"
-![[Pasted image 20231115153757.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115153757.png)
 
 2. 点击 "CD/DVD"，选择下载的 ISO 文件，点击 "确定"
-![[Pasted image 20231115154024.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115154024.png)
 
 3. 点击 "启动虚拟机"
-![[Pasted image 20231115154148.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115154148.png)
 
 4. 选择 "Try or install Ubuntu Server"，回车
-![[Pasted image 20231115154254.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115154254.png)
 
 5. 语言选择 "English"，回车
-![[Pasted image 20231115154449.png |650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115154449.png)
 
 6. 选择 "Continue without updating"，回车
-![[Pasted image 20231115154633.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115154633.png)
 
 7. 选择 "Done"，回车
-![[Pasted image 20231115154810.png |650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115154810.png)
 
 8. 选择 "Done"，回车
-![[Pasted image 20231115154937.png |650]]
-![[Pasted image 20231115155029.png |650]]
-![[Pasted image 20231115155133.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115154937.png)
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115155029.png)
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115155133.png)
 
 9. 镜像地址修改为国内的软件下载源（https://mirrors.aliyun.com/ubuntu）
-![[Pasted image 20231115155335.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115155335.png)
 
 10. 选择 "Done"，回车
-![[Pasted image 20231115155539.png | 650]]
-![[Pasted image 20231115155643.png |650]]
-![[Pasted image 20231115155829.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115155539.png)
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115155643.png)
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115155829.png)
 
 11. 配置主机名、用户和密码
-![[Pasted image 20231115160030.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115160030.png)
 
 12. 选择 "Install OpenSSh server"
-![[Pasted image 20231115160205.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115160205.png)
 
 13. 开始安装
-![[Pasted image 20231115160244.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115160244.png)
 
 
 14. 安装完成，重启
-![[Pasted image 20231115163003.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115163003.png)
 
 12. 登录
-![[Pasted image 20231115163255.png |650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231115163255.png)
 
 
 ## 3. Linux 常用基本命令
@@ -219,13 +218,13 @@ tmpfs                175M     0  175M   0% /run/user/0
 `date`：显示或设置系统时间
 
 常用格式
-- `%s`：时间戳
+- `)`：时间戳
 - `%F`：完整的日期，等同于 `%Y-%m-%d`
 - `%T`：时间，等同于 `%H:%M:%S`
 ```bash
 [root@rocky ~]# date
 Mon Nov 20 16:58:35 CST 2023
-[root@rocky ~]# date +%s
+[root@rocky ~]# date +)
 1700470732
 [root@rocky ~]# date +'%F_%T'
 2023-11-20_16:59:33
