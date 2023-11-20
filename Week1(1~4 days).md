@@ -24,7 +24,7 @@
 #### 创建虚拟机
 
 1. 选择 "文件 -> 新建虚拟机"
-![[images/Pasted image 20231114230942.png | 650]]
+![](https://github.com/zqhgithubuser/Homework/blob/main/images/Pasted_image_20231114230942.png)
 
 2. 选择"自定义安装"，点击 "下一步"
 ![[Pasted image 20231115141942.png | 650]]
