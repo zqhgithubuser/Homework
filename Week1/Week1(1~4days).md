@@ -899,7 +899,7 @@ inode 中具有以下属性：
 
 #### 硬链接
 
-![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231114193252.png)
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231114193024.png)
 
 **硬链接**（Hard link）是一个将文件名与索引节点关联起来的目录级索引节点表条目。因此，新创建的普通文件默认硬链接数为 1
 
