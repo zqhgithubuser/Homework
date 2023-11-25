@@ -42,8 +42,7 @@
 
 1.选择 "文件 -> 新建虚拟机"
 
-[//]:
-![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231114230942.png){: width="650"}
+![image1|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231114230942.png)
 
 2.选择"自定义安装"，点击 "下一步"
 
