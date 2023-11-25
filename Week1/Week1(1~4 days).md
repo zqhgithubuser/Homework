@@ -3,82 +3,103 @@
 
 
 
-## 2. VMware Workstations 安装 Linux 系统
+### 服务器硬件组成
+
+**CPU**
+
+中央处理器（Gentral Processing Unit，CPU）是计算机的核心组件之一，被认为是计算机的大脑。负责解释和执行计算机指令以及处理计算机软件中的数据
+
+**主板**
+
+主板（Mainboard）是构成计算机的主要电路板。主板的主要功能是提供各种接口和插槽，用于连接和集成计算机的各个组件和设备，例如处理器、内存、存储设备、显卡、声卡、网卡等
+
+**内存**
+
+随机访问存储器（Random Access Memory，RAM）是计算机中的一种内部存储器（内存），用于与 CPU 直接交换数据。它可以随时读写，而且速度很快，通常作为操作系统和其它正在运行中的程序的临时数据存储介质
+
+**硬盘**
+
+
+
+**网卡**
+
+
+
+
+
+
+## 2. VMware Workstation 安装 Linux 系统
 
 ### 安装前准备
 
 - 确保电脑开启虚拟化功能（默认已开启）
 - 下载 ISO 文件
-	- Rocky 8
-		- [桌面版](https://download.rockylinux.org/pub/rocky/8/isos/x86_64/Rocky-8.8-x86_64-dvd1.iso)
-		- [服务器版](https://download.rockylinux.org/pub/rocky/8/isos/x86_64/Rocky-8.8-x86_64-minimal.iso)
-	- Ubuntu 22.04
-		- [桌面版](https://releases.ubuntu.com/jammy/ubuntu-22.04.3-desktop-amd64.iso)
-		- [服务器版](https://releases.ubuntu.com/jammy/ubuntu-22.04.3-live-server-amd64.iso)
+	- Rocky 8：[桌面版](https://dl.rockylinux.org/vault/rocky/8.8/isos/x86_64/Rocky-8.8-x86_64-dvd1.iso) | [服务器版](https://dl.rockylinux.org/vault/rocky/8.8/isos/x86_64/Rocky-8.8-x86_64-minimal.iso)
+	- Ubuntu 22.04：[桌面版](https://releases.ubuntu.com/jammy/ubuntu-22.04.3-desktop-amd64.iso) | [服务器版](https://releases.ubuntu.com/jammy/ubuntu-22.04.3-live-server-amd64.iso)
 
 
 ### 创建虚拟机
 
 1.选择 "文件 -> 新建虚拟机"
 
-![[Pasted image 20231114230942.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231114230942.png)
 
 2.选择"自定义安装"，点击 "下一步"
 
-![[Pasted image 20231115141942.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115141942.png)
 
 3."硬件兼容性" 默认，点击 "下一步"
 
-![[Pasted image 20231115142255.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115142255.png)
 
 4.选择 "稍后安装操作系统"，点击 "下一步"
 
-![[Pasted image 20231115142427.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115142427.png)
 
 5.客户机操作系统选择 "Linux"，版本选择 "Ubuntu 64 位"（Rocky 选择 "CentOS 8 64 位"），点击 "下一步"
 
-![[Pasted image 20231115142612.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115142612.png)
 
 6.填写 "虚拟机名称"，选择虚拟机目录存放的 "位置"，点击 "下一步"
 
-![[Pasted image 20231115142914.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115142914.png)
 
 7.选择 "处理器数量"，点击 "下一步"
 
-![[Pasted image 20231115143006.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115143006.png)
 
 
 8."此虚拟机的内存" 填写 2048 MB，点击 "下一步"
 
-![[Pasted image 20231115143317.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115143317.png)
 
 9."网络类型" 选择 "使用网络地址转换(NAT)"，点击 "下一步"
 
-![[Pasted image 20231115143741.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115143741.png)
 
 10."SCSI 控制器" 默认，点击 "下一步"
 
-![[Pasted image 20231115144642.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115144642.png)
 
 11."虚拟磁盘类型" 默认，点击 "下一步"
 
-![[Pasted image 20231115144719.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115144719.png)
 
 12.选择 "创建新虚拟磁盘"，点击 "下一步"
 
-![[Pasted image 20231115144954.png |650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115144954.png)
 
 12."最大磁盘大小" 填写 "100GB"，不要勾选 "立即分配所有磁盘空间"，点击 "下一步"
 
-![[Pasted image 20231115145242.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115145242.png)
 
 13."磁盘文件" 名默认，点击 "下一步"
 
-![[Pasted image 20231115145329.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115145329.png)
 
 14.点击 "完成"
 
-![[Pasted image 20231115145403.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115145403.png)
 
 ### 安装操作系统
 
@@ -86,141 +107,141 @@
 
 1.点击 "编辑虚拟机设置"
 
-![[Pasted image 20231120214439.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231120214439.png)
 
 2.点击 "CD/DVD"，选择下载的 ISO 文件，点击 "确定"
 
-![[Pasted image 20231120214328.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231120214328.png)
 
 3.点击 "开启此虚拟机"
 
-![[Pasted image 20231120214539.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231120214539.png)
 
 4.选择 "Install Rocky Linux 8.8"，回车
 
-![[Pasted image 20231120215026.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231120215026.png)
 
 5.语言选择 "English"
 
-![[Pasted image 20231120215437.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231120215437.png)
 
 6.安装目标选择 "sda"，点击 "Done"
 
-![[Pasted image 20231120220350.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231120220350.png)
 
 7.时区选择 "Asia/Shanghai"，点击 "Done"
 
-![[Pasted image 20231120220507.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231120220507.png)
 
 8.激活网卡连接，可以看到动态获取的 IP 地址，点击 "Done"
 
-![[Pasted image 20231120220622.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231120220622.png)
 
 9.设置 root 密码，点击 "Done"
 
-![[Pasted image 20231120220832.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231120220832.png)
 
 10.创建一个用户并设置密码
 
-![[Pasted image 20231120220935.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231120220935.png)
 
 11.开始安装，点击 "Begin Installation"
 
-![[Pasted image 20231120221155.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231120221155.png)
 
 12.安装完成，重启
 
-![[Pasted image 20231120224141.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231120224141.png)
 
 13.接受许可协议，点击 "Done"，最后点击 "FINISH CONFIGUARTION"
 
-![[Pasted image 20231120224330.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231120224330.png)
 
 14.登录
 
-![[Pasted image 20231120224602.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231120224602.png)
 
 #### Ubuntu 22.04
 
 1.点击 "编辑虚拟机设置"
 
-![[Pasted image 20231115153757.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115153757.png)
 
 2.点击 "CD/DVD"，选择下载的 ISO 文件，点击 "确定"
 
-![[Pasted image 20231115154024.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115154024.png)
 
 3.点击 "开启此虚拟机"
 
-![[Pasted image 20231115154148.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115154148.png)
 
 4.选择 "Try or install Ubuntu Server"，回车
 
-![[Pasted image 20231115154254.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115154254.png)
 
 5.语言选择 "English"，回车
 
-![[Pasted image 20231115154449.png |650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115154449.png)
 
 6.选择 "Continue without updating"，回车
 
-![[Pasted image 20231115154633.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115154633.png)
 
 7.选择 "Done"，回车
 
-![[Pasted image 20231115154810.png |650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115154810.png)
 
 8.选择 "Done"，回车
 
-![[Pasted image 20231115154937.png |650]]
-![[Pasted image 20231115155029.png |650]]
-![[Pasted image 20231115155133.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115154937.png)
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115155029.png)
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115155133.png)
 
 9.镜像地址修改为国内的软件下载源（https://mirrors.aliyun.com/ubuntu）
 
-![[Pasted image 20231115155335.png | 650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115155335.png)
 
 10.选择 "Done"，回车
 
-![[Pasted image 20231115155539.png | 650]]
-![[Pasted image 20231115155643.png |650]]
-![[Pasted image 20231115155829.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115155539.png)
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115155643.png)
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115155829.png)
 
 11.配置主机名、用户和密码
 
-![[Pasted image 20231115160030.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115160030.png)
 
 12.选择 "Install OpenSSh server"
 
-![[Pasted image 20231115160205.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115160205.png)
 
 13.开始安装
 
-![[Pasted image 20231115160244.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115160244.png)
 
 
 14.安装完成，重启
 
-![[Pasted image 20231115163003.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115163003.png)
 
 12.登录
 
-![[Pasted image 20231115163255.png |650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115163255.png)
 
 ### 远程登录
 
 查看虚拟机 的 IP 地址
 
-![[Pasted image 20231120223750.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231120223750.png)
 
 XShell 创建新的会话
 
-![[Pasted image 20231120223510.png|650]]
-![[Pasted image 20231120223922.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231120223510.png)
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231120223922.png)
 
 点击 "连接"
 
-![[Pasted image 20231120224054.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231120224054.png)
 
 >[!TIP]
 >Ubuntu 系统默认情况下不允许以 root 用户的身份进行 SSH 远程登录
@@ -878,7 +899,7 @@ inode 中具有以下属性：
 
 #### 硬链接
 
-![[Pasted image 20231114193252.png | 300]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231114193252.png)
 
 **硬链接**（Hard link）是一个将文件名与索引节点关联起来的目录级索引节点表条目。因此，新创建的普通文件默认硬链接数为 1
 
@@ -900,7 +921,7 @@ inode 中具有以下属性：
 
 #### 符号链接
 
-![[Pasted image 20231114194034.png | 300]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231114194034.png)
 
 **符号链接**（Symbolic link）也称为软链接，是一种特殊的文件类型，它的数据块中存放的是路径名（字符串），指向目标文件或目录的位置
 
@@ -918,11 +939,11 @@ lrwxrwxrwx. 1 root root 10 Nov 14 14:00 file.slink -> /root/file
 # 删除目标文件
 [root@rocky88 ~]$ rm -f file
 ```
-![[Pasted image 20231114140155.png]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231114140155.png)
 
 #### 硬链接 vs 软链接
 
-![[Pasted image 20231122115401.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231122115401.png)
 
 
 ### IO 重定向和管道
@@ -1141,11 +1162,11 @@ total 0
 
 权限表示
 
-![[Pasted image 20231121140846.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231121140846.png)
 
 权限作用
 
-![[Pasted image 20231121171458.png|650]]
+![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231121171458.png)
 
 
 `chmod`：修改文件权限
