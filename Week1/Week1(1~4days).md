@@ -70,7 +70,7 @@ RAID 控制器是一种用于管理和控制 RAID 系统的硬件设备，它将
 
 - 确保电脑开启虚拟化功能（默认已开启）
 - 下载 ISO 文件
-	- Rocky 8：[桌面版](https://dl.rockylinux.org/vault/rocky/8.8/isos/x86_64/Rocky-8.8-x86_64-dvd1.iso) | [服务器版](https://dl.rockylinux.org/vault/rocky/8.8/isos/x86_64/Rocky-8.8-x86_64-minimal.iso)
+	- Rocky 8.8：[桌面版](https://dl.rockylinux.org/vault/rocky/8.8/isos/x86_64/Rocky-8.8-x86_64-dvd1.iso) | [服务器版](https://dl.rockylinux.org/vault/rocky/8.8/isos/x86_64/Rocky-8.8-x86_64-minimal.iso)
 	- Ubuntu 22.04：[桌面版](https://releases.ubuntu.com/jammy/ubuntu-22.04.3-desktop-amd64.iso) | [服务器版](https://releases.ubuntu.com/jammy/ubuntu-22.04.3-live-server-amd64.iso)
 
 
@@ -139,7 +139,7 @@ RAID 控制器是一种用于管理和控制 RAID 系统的硬件设备，它将
 
 ### 安装操作系统
 
-#### Rocky 8
+#### Rocky 8.8
 
 1.点击 "编辑虚拟机设置"
 
