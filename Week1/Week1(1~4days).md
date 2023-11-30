@@ -1406,7 +1406,7 @@ new
 
 ### 访问控制列表
 
-**访问控制列表**（Access Control List，ACL）是一种用于控制对资源访问权限的机制，它提供了更细粒度的权限控制
+访问控制列表（Access Control List，ACL）是一种用于控制对资源访问权限的机制，它提供了更细粒度的权限控制
 
 `setfacl`：设置文件 ACL
 
