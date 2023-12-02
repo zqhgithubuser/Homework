@@ -125,7 +125,7 @@ RAID 控制器是一种用于管理和控制 RAID 系统的硬件设备，它将
 
 ![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115144954.png)
 
-12."最大磁盘大小" 填写 "100GB"，不要勾选 "立即分配所有磁盘空间"，点击 "下一步"
+12.指定磁盘容量，不要勾选 "立即分配所有磁盘空间"，点击 "下一步"
 
 ![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231115145242.png)
 
@@ -157,7 +157,7 @@ RAID 控制器是一种用于管理和控制 RAID 系统的硬件设备，它将
 
 ![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231120215026.png)
 
-5.语言选择 "English"
+5.语言选择 "English"，点击 "Continue"
 
 ![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231120215437.png)
 
@@ -185,7 +185,7 @@ RAID 控制器是一种用于管理和控制 RAID 系统的硬件设备，它将
 
 ![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231120221155.png)
 
-12.安装完成，重启
+12.安装完成后重启，点击 "Reboot"
 
 ![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231120224141.png)
 
@@ -270,9 +270,12 @@ RAID 控制器是一种用于管理和控制 RAID 系统的硬件设备，它将
 
 ![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231120223750.png)
 
-XShell 创建新的会话
+创建新的 XShell 会话，输入 IP 地址
 
 ![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231120223510.png)
+
+输入用户名和密码
+
 ![|650](https://github.com/zqhgithubuser/Homework/blob/main/Week1/images/Pasted_image_20231120223922.png)
 
 点击 "连接"
@@ -436,7 +439,7 @@ tmpfs                175M     0  175M   0% /run/user/0
 `date`：显示或设置系统时间
 
 常用格式
-- `%s`：时间戳
+- `%s`：时间戳，即从 1970 年 1 月 1 日至今的秒数
 - `%F`：完整的日期，等同于 `%Y-%m-%d`
 - `%T`：时间，等同于 `%H:%M:%S`
 ```bash
@@ -567,7 +570,7 @@ Codename:       jammy
 - `init 6`
 - `shutdown -r now`
 
-### 用户登录信息
+### 用户登录相关信息
 
 `whoami`：显示与当前有效用户 ID 关联的用户名
 ```bash
@@ -641,6 +644,34 @@ $PATH
 ### 文件系统目录结构
 
 Linux 文件系统采用层级目录结构，从根目录（/）开始，使用斜杠（/）分隔，逐级向下组织
+
+```
+[root@rocky ~]# tree -L 1 /
+/
+├── bin -> usr/bin
+├── boot
+├── data
+├── dev
+├── etc
+├── go
+├── home
+├── lib -> usr/lib
+├── lib64 -> usr/lib64
+├── media
+├── mnt
+├── opt
+├── proc
+├── root
+├── run
+├── sbin -> usr/sbin
+├── srv
+├── sys
+├── tmp
+├── usr
+└── var
+
+21 directories, 0 files
+```
 
 常见的文件系统目录及描述：
 - `/bin`：包含所有用户都可以执行的命令
