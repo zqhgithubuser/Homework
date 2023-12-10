@@ -714,10 +714,10 @@ dnf.conf
 
 父进程的环境变量在子进程中可见
 
-声明并赋值
+声明环境变量
 
 ```bash
-$ export name=VALUE
+export NAME=value
 ```
 
 打印所有环境变量
@@ -726,12 +726,13 @@ $ export name=VALUE
 $ env
 $ printenv
 $ export
+$ declare -x
 ```
 
 查看指定进程的环境变量
 
 ```bash
-$ cat /proc/$$/environ
+$ cat /proc/$PID/environ
 ```
 
 ### 只读变量
@@ -739,7 +740,7 @@ $ cat /proc/$$/environ
 只读变量的值不能被修改
 
 ```bash
-$ readonly name
+readonly name
 ```
 
 ### 位置变量
