@@ -720,7 +720,7 @@ dnf.conf
 export NAME=value
 ```
 
-打印所有环境变量
+列出所有环境变量
 
 ```bash
 $ env
@@ -741,6 +741,12 @@ $ cat /proc/$PID/environ
 
 ```bash
 readonly name
+```
+
+列出所有制度变量
+
+```bash
+$ readonly
 ```
 
 ### 位置变量
