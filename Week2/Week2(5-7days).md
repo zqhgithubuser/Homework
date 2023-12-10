@@ -745,7 +745,7 @@ $ cat /proc/$PID/environ
 readonly name=value
 ```
 
-列出所有制度变量
+列出所有只读变量
 
 ```bash
 $ readonly
