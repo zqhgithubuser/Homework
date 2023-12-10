@@ -739,8 +739,10 @@ $ cat /proc/$PID/environ
 
 只读变量的值不能被修改
 
+声明只读变量
+
 ```bash
-readonly name
+readonly name=value
 ```
 
 列出所有制度变量
