@@ -896,6 +896,7 @@ useradd: user 'user10' already exists
 主引导记录（Master Boot Record，MBR）又叫作主引导扇区，是计算机开机后访问硬盘时必须要读取的第一个扇区，主引导扇区记录着硬盘本身的相关信息以及硬盘各个分区的大小和位置信息
 
 标准 MBR 结构
+
 ![](https://github.com/zqhgithubuser/Homework/blob/main/Week2/images/Pasted_image_20231209200157.png)
 
 特点：
