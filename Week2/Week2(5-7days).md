@@ -52,7 +52,7 @@ a b c d e
 e d c b a
 ```
 
-`head`：默认打印文件的前 10 行
+**`head`**：默认打印文件的前 10 行
 
 常用选项
 - `-n [-]NUM`：打印文件的前 n 行
@@ -74,7 +74,7 @@ e d c b a
 7
 ```
 
-`tail`：默认打印文件的最后 10 行
+**`tail`**：默认打印文件的最后 10 行
 
 常用选项
 - `-n [+]NUM`：打印文件的最后 n 行
@@ -114,9 +114,9 @@ Dec  5 22:43:44 rocky systemd[1]: Started Session 2 of user root.
 [root@rocky ~]#
 ```
 
-`more`：分页查看文件内容，仅支持向前翻页
+**`more`**：分页查看文件内容，仅支持向前翻页
 
-`less`：分页查看文件内容，支持向前和向后翻页，支持搜索、跳转、执行各种命令
+**`less`**：分页查看文件内容，支持向前和向后翻页，支持搜索、跳转、执行各种命令
 
 ```bash
 [root@rocky ~]# less /etc/profile
@@ -148,7 +148,7 @@ pathmunge () {
 
 ### 提取文本内容
 
-`cut`：提取文本的特定部分
+**`cut`**：提取文本的特定部分
 
 常用选项
 - `-c`：选取指定的字符、字符集或字符范围
@@ -169,7 +169,7 @@ sync:/sbin
 
 ### 合并文本内容
 
-`paste`：按列合并文本内容
+**`paste`**：按列合并文本内容
 
 常用选项
 - `-d`：指定分隔符
@@ -217,7 +217,7 @@ a       b       c       d       e
 
 ### 分析文本内容
 
-`wc`：统计文本的行数、单词数和字符数
+**`wc`**：统计文本的行数、单词数和字符数
 
 常用选项
 - `-c`：统计字符数
@@ -232,7 +232,7 @@ a       b       c       d       e
 51
 ```
 
-`osrt`：排序
+**`sort`**：排序
 
 常用选项
 - `-r`：逆序排序
@@ -252,7 +252,7 @@ tmpfs 874M 0 874M 0% /sys/fs/cgroup
 tmpfs 874M 0 874M 0% /dev/shm
 ```
 
-`uniq`：合并重复的行
+**`uniq`**：合并重复的行
 
 常用选项
 - `-c`：显示每行重复的次数
@@ -293,7 +293,7 @@ c
       1 2
 ```
 
-`diff`：逐行比较两个文件
+**`diff`**：逐行比较两个文件
 
 ```bash
 [root@rocky yum.repos.d]# diff Rocky-BaseOS.repo Rocky-BaseOS.repo.bak
@@ -307,7 +307,7 @@ c
 
 ### 格式化打印文本内容
 
-`printf`：格式化并打印数据
+**`printf`**：格式化并打印数据
 
 常用格式说明符
 - `%d`：十进制数
@@ -344,7 +344,7 @@ a
 
 ### 文本处理三剑客 grep 
 
-`grep`：Global Regular Expression Print 的缩写，用于搜索并打印与正则表达式中的模式匹配的行
+**`grep`**：Global Regular Expression Print 的缩写，用于搜索并打印与正则表达式中的模式匹配的行
 
 常用选项
 - `-A`：显示匹配的行及其后面的 n 行
@@ -511,7 +511,7 @@ SELINUXTYPE=targeted
 
 ## 2. 文件查找
 
-`locate`：在文件索引数据库中搜索匹配的文件名，速度非常快，但不提供实时更新
+**`locate`**：在文件索引数据库中搜索匹配的文件名，速度非常快，但不提供实时更新
 
 常用选项
 - `-i`：不区分大小写
@@ -528,7 +528,7 @@ SELINUXTYPE=targeted
 ```
 
 
-`find`：在文件系统中实时搜索文件
+**`find`**：在文件系统中实时搜索文件
 
 常用选项
 - `-empty`：查找空文件或目录
@@ -918,7 +918,7 @@ GPT 结构：
 
 ### 分区
 
-`fdisk`：管理 MBR 分区表
+**`fdisk`**：管理 MBR 分区表
 
 常用选项
 - `-l`：显示分区的详细信息
@@ -1014,14 +1014,14 @@ Calling ioctl() to re-read partition table.
 Syncing disks.
 ```
 
-`gdisk`：管理 GPT 分区表
+**`gdisk`**：管理 GPT 分区表
 
 常用选项
 - `-l`：显示分区的详细信息
 
 ### 创建文件系统
 
-`mkfs`：创建文件系统
+**`mkfs`**：创建文件系统
 
 创建 ext4 文件系统
 
@@ -1055,7 +1055,7 @@ log      =internal log           bsize=4096   blocks=2560, version=2
 realtime =none                   extsz=4096   blocks=0, rtextents=0
 ```
 
-`tune2fs -l`：显示 ext 文件系统信息
+**`tune2fs -l`**：显示 ext 文件系统信息
 
 ```bash
 [root@rocky ~]# tune2fs -l /dev/sdb1
@@ -1068,7 +1068,7 @@ Filesystem revision #:    1 (dynamic)
 ......
 ```
 
-`xfs_info`：显示 xfs 文件系统信息
+**`xfs_info`**：显示 xfs 文件系统信息
 
 ```bash
 [root@rocky ~]# xfs_info /dev/sdb5
@@ -1086,7 +1086,7 @@ realtime =none                   extsz=4096   blocks=0, rtextents=0
 
 ### 挂载
 
-`mount`：挂载文件系统
+**`mount`**：挂载文件系统
 - `-t`：指定文件系统类型
 - `-o`：指定挂载选项
 
@@ -1124,7 +1124,7 @@ sdb      8:16   0  20G  0 disk
 └─sdb5   8:21   0   1G  0 part /sdb5
 ```
 
-`umount`：卸载文件系统
+**`umount`**：卸载文件系统
 
 ```bash
 # 指定分区
@@ -1144,7 +1144,7 @@ sdb      8:16   0  20G  0 disk
 
 ### swap 分区管理
 
-`mkswap`：创建 swap 分区
+**`mkswap`**：创建 swap 分区
 
 ```bash
 [root@rocky ~]# mkswap /dev/sdc1
@@ -1158,7 +1158,7 @@ no label, UUID=64795a67-a603-4e47-8b84-3b8e1c2c9d8f
 /dev/sdc1               none                    swap    defaults        0 0
 ```
 
-`swapon`：启用 swap 分区
+**`swapon`**：启用 swap 分区
 
 常用选项
 - `-a`：启用 `/etc/fstab` 文件中的所有的 swap 分区
@@ -1179,7 +1179,7 @@ Filename                                Type            Size            Used    
 /dev/sdc1                               partition       4194300         0               -3
 ```
 
-`swapoff`：禁用 swap 分区
+**`swapoff`**：禁用 swap 分区
 - `-a`：禁用 `/etc/fstab` 文件中的所有的 swap 分区
 
 ```bash
