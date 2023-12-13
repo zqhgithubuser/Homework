@@ -1142,6 +1142,24 @@ sdb      8:16   0  20G  0 disk
 └─sdb5   8:21   0   1G  0 part
 ```
 
+开机自动挂载文件系统
+- 查看分区的 UUID 
+
+```bash
+[root@rocky ~]# blkid
+......
+dev/sdb1: UUID="fc5e8a64-f4c3-44c0-9636-8967d743b194" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="dba7efe1-01"
+/dev/sdb5: UUID="2241eb35-22ef-4ff6-8e2b-61281c7fe4b1" BLOCK_SIZE="512" TYPE="xfs" PARTUUID="dba7efe1-05"
+......
+```
+
+- 编辑 `/etc/fstab` 文件，添加挂载条目
+
+```bash
+UUID=fc5e8a64-f4c3-44c0-9636-8967d743b194 /sdb1                   ext4    defaults        0 0
+UUID=2241eb35-22ef-4ff6-8e2b-61281c7fe4b1 /sdb5                   xfs     defaults        0 0
+```
+
 ### swap 分区管理
 
 **`mkswap`**：创建 swap 分区
