@@ -1105,7 +1105,7 @@ realtime =none                   extsz=4096   blocks=0, rtextents=0
 - `rw`：以读写的方式挂载文件系统
 - `user`：允许普通用户挂载文件系统
 - `nouser`：不允许普通用户挂载文件系统
-- `defaults`：默认使用 `rw`、`suid`、`dev`、`exec`、`auto`、`nouser` 和 `async` 选项
+- `defaults`：使用 `rw`、`suid`、`dev`、`exec`、`auto`、`nouser` 和 `async` 选项
 
 ```bash
 # 创建挂载点
@@ -1148,7 +1148,7 @@ sdb      8:16   0  20G  0 disk
 ```bash
 [root@rocky ~]# blkid
 ......
-dev/sdb1: UUID="fc5e8a64-f4c3-44c0-9636-8967d743b194" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="dba7efe1-01"
+/dev/sdb1: UUID="fc5e8a64-f4c3-44c0-9636-8967d743b194" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="dba7efe1-01"
 /dev/sdb5: UUID="2241eb35-22ef-4ff6-8e2b-61281c7fe4b1" BLOCK_SIZE="512" TYPE="xfs" PARTUUID="dba7efe1-05"
 ......
 ```
@@ -1159,6 +1159,9 @@ dev/sdb1: UUID="fc5e8a64-f4c3-44c0-9636-8967d743b194" BLOCK_SIZE="4096" TYPE="ex
 UUID=fc5e8a64-f4c3-44c0-9636-8967d743b194 /sdb1                   ext4    defaults        0 0
 UUID=2241eb35-22ef-4ff6-8e2b-61281c7fe4b1 /sdb5                   xfs     defaults        0 0
 ```
+
+>[!note]
+>分别名可能在系统重新启动或更改硬件配置后发生变化，因此使用 UUID 代替分区名可以确保分区被正确挂载
 
 ### swap 分区管理
 
