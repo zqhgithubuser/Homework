@@ -1214,9 +1214,11 @@ Balance-rr (Mode 0)
 Active-backup (Mode 1)
 
 - `Active-backup` 确保 bond 中只有一个端口是活动的。当且仅当活动端口出现故障时，才会切换到另一个端口。bond 对外显示活动端口的 MAC 地址。该模式提供容错并且不要求任何交换机配置
+
 Balance-xor (Mode 2)
 
 - `Balance-xor` 使用所选择的传输哈希策略传输数据包。默认策略是 \[( 源 MAC 地址 XOR 目的 MAC 地址 XOR 包类型 ID) % 端口数量 ]。该模式提供负载均衡和容错
+
 Broadcast (Mode 3)
 
 - `Broadcast` 所有数据包被广播到所有端口。该模式提供容错
