@@ -670,7 +670,8 @@ install() {
 
 init
 download_src
-install && ${INSTALL_DIR}/nginx && echo -e ${COLOR_GREEN}"成功启动NGINX服务！"$END
+install
+${INSTALL_DIR}/nginx && echo -e ${COLOR_GREEN}"成功启动NGINX服务！"$END
 ```
 
 脚本执行结果
