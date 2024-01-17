@@ -628,7 +628,7 @@ END="\e[0m"
 
 source /etc/os-release
 
-function init {
+init() {
     if [[ $ID =~ rhel|rocky|centos ]]; then
         systemctl disable --now firewalld
         yum makecache
@@ -643,7 +643,7 @@ function init {
     fi
 }
 
-function download {
+download_src() {
     if [ ! -f ${SRC_PACKAGE} ]; then
         if [[ $ID =~ rhel|rocky|centos ]]; then
             yum install -y wget
@@ -656,7 +656,7 @@ function download {
     fi
 }
 
-function install {
+install() {
     cd /usr/local/src/nginx-${NGINX_VERSION}
 
     ./configure \
@@ -669,7 +669,7 @@ function install {
 }
 
 init
-download
+download_src
 install && ${INSTALL_DIR}/nginx && echo -e ${COLOR_GREEN}"成功启动NGINX服务！"$END
 ```
 
