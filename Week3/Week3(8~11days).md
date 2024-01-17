@@ -142,8 +142,7 @@ Filesystem                    Type      Size  Used Avail Use% Mounted on
 ## 3. 软件包管理程序有哪些，软件包中包含什么内容？yum/dnf/apt 软件包获取途径，以及命令选项示例？
 
 >软件包获取途径
-
->https://developer.aliyun.com/mirror/
+https://developer.aliyun.com/mirror/
 
 ### 3.1 rpm
 
