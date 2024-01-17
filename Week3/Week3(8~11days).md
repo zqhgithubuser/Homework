@@ -763,7 +763,7 @@ net.ipv4.ip_local_port_range = "20000   60000"
 
 ![](https://github.com/zqhgithubuser/Homework/blob/main/Week3/images/Pasted_image_20240114141108.png)
 
-1. 开始，客户端和服务端都处于 `CLOSED` 状态，服务端主动监听某个端口，进入`LISTEN` 状态
+1. 开始，客户端和服务端都处于 `CLOSED` 状态，服务端主动监听某个端口，进入 `LISTEN` 状态
 2. SYN：客户端随机初始化序列号 `client_isn`，将 SYN 标志位置为 1，表示 SYN 报文。接着将报文发送给服务端，表示向服务端请求建立连接，该报文不包含应用层数据，客户端进入 `SYN-SENT` 状态
 3. SYN-ACK：服务端收到客户端的 SYN 报文后，首先随机初始化自己的序列号 `server_isn`，然后将 `client_isn + 1` 填入TCP 头部的确认号字段，接着将 SYN 和 ACK 标志位都置为 1，最后将报文发送给客户端，该报文也不包含应用层数据，服务端进入 `SYN-RCVD` 状态
 4. ACK：客户端收到服务端发送的 SYN-ACK 报文后，需要向服务端回应最后一个应答报文。将 ACK 标志位置为 1，确认号字段填入 `server_isn + 1`，最后把报文发送给服务端。该报文可以携带应用层数据，客户端进入 `ESTABLISHED` 状态
