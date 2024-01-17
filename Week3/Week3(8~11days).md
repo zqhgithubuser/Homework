@@ -677,7 +677,7 @@ ${INSTALL_DIR}/nginx && echo -e ${COLOR_GREEN}"成功启动NGINX服务！"$END
 脚本执行结果
 
 ```bash
-[root@rocky scripts]# ./install_nginx.sh
+[root@rocky scripts]# ./install_nginx.sh 1.24.0
 ......
 Configuration summary
   + using system PCRE2 library
