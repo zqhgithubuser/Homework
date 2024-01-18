@@ -712,8 +712,7 @@ Configuration summary
   nginx http scgi temporary files: "scgi_temp"
 ......
 make[1]: Leaving directory '/usr/local/src/nginx-1.24.0'
-安装成功！
-成功启动NGINX服务！
+成功启动Nginx服务！
 ```
 
 ## 7. 总结 OSI 模型每层的作用及对应的协议 
