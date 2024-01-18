@@ -617,7 +617,7 @@ zqh@ubuntu:~$ sudo systemctl reload ssh.service
 ```bash
 #!/usr/bin/bash
 
-PROCESSOR=`grep -c processor /proc/cpuinfo`
+PROCESSOR=$(grep -c processor /proc/cpuinfo)
 
 NGINX_VERSION=$1
 SRC_PACKAGE=nginx-${NGINX_VERSION}.tar.gz
@@ -628,6 +628,9 @@ END="\e[0m"
 
 source /etc/os-release
 
+#######################################
+# 关闭防火墙，安装依赖包
+#######################################
 init() {
     if [[ $ID =~ rhel|rocky|centos ]]; then
         systemctl disable --now firewalld
@@ -639,11 +642,14 @@ init() {
         sudo apt install -y gcc make libssh-dev libpcre3-dev
     else
         echo -e ${COLOR_RED}"暂不支持$ID系统"$END
-        exit
+        exit 1
     fi
 }
 
-download_src() {
+#######################################
+# 下载并解压Nginx源码包
+#######################################
+download() {
     if [ ! -f ${SRC_PACKAGE} ]; then
         if [[ $ID =~ rhel|rocky|centos ]]; then
             yum install -y wget
@@ -651,11 +657,14 @@ download_src() {
             sudo apt install -y wget
         fi
         wget https://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz \
-            || { echo -e ${COLOR_RED}"下载失败！"$END; exit; }
+            || { echo -e ${COLOR_RED}"下载失败！"$END; exit 1; }
         tar -xf ${SRC_PACKAGE} -C /usr/local/src
     fi
 }
 
+#######################################
+# 编译安装Nginx
+#######################################
 install() {
     cd /usr/local/src/nginx-${NGINX_VERSION}
 
@@ -665,13 +674,17 @@ install() {
         --pid-path=${INSTALL_DIR}/nginx.pid \
         --with-http_ssl_module
 
-    make -j $PROCESSOR && make install && echo -e ${COLOR_GREEN}"安装成功！"$END
+    make -j $PROCESSOR && make install
+    if (( $? != 0 )); then
+        echo -e ${COLOR_RED}"安装失败！"$END
+        exit 1
+    fi
 }
 
 init
-download_src
+download
 install
-${INSTALL_DIR}/nginx && echo -e ${COLOR_GREEN}"成功启动NGINX服务！"$END
+${INSTALL_DIR}/nginx && echo -e ${COLOR_GREEN}"成功启动Nginx服务！"$END
 ```
 
 脚本执行结果
