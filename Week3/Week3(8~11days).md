@@ -1398,7 +1398,7 @@ Slave queue ID: 0
 ```bash
 #!/usr/bin/bash
 
-network=`ifconfig eth0 | sed -n '2p' | awk '{print $2}' | cut -d '.' -f 1-3`
+network=$(ifconfig eth0 | sed -n '2p' | awk '{print $2}' | cut -d '.' -f 1-3)
 
 for host in {1..254}; do
     ip=$network.$host
