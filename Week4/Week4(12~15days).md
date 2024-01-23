@@ -222,7 +222,7 @@ ABC123ABC
 
 | 变量未设置                                            | 变量值为空                                         | 变量值非空                              |
 | ----------------------------------------------------- | -------------------------------------------------- | --------------------------------------- |
-| `# unset str3; echo ${str3-"abc"}`<br>abc               | `# str3=""; echo ${str3-"abc"}`<br>                  | `# str3=123; echo ${str3-"abc"}`<br/>123  |
+| `# unset str3; echo ${str3-"abc"}`<br>abc               | `# str3=""; echo ${str3-"abc"}`<br>\t                  | `# str3=123; echo ${str3-"abc"}`<br/>123  |
 | `# unset str3; echo ${str3:-"abc"}`<br/>abc             | `# str3=""; echo ${str3:-"abc"}`<br/>abc             | `# str3=123; echo ${str3:-"abc"}`<br/>123 |
 | `# unset str3; echo ${str3+"abc"}`<br>                  | `# str3=""; echo ${str3+"abc"}`<br/>abc              | `# str3=123; echo ${str3+"abc"}`<br/>abc  |
 | `# unset str3; echo ${str3:+"abc"}`<br>                 | `# str3=""; echo ${str3:+"abc"}`<br>                 | `# str3=123; echo ${str3:+"abc"}`<br/>abc |
