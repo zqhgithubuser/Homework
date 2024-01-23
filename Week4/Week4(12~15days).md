@@ -922,8 +922,11 @@ shutdown             nologin
 ```
 
 >length([s])：返回字符串 s 的长度
+>
 >gsub(r, s [, t])：替换所有匹配的子串
+>
 >sub(r, s [, t])：替换第一个匹配的子串
+>
 >split(s, a [, r [, seps]])：指定分隔符 seps 分割字符串 s，并将分割后的子串存储在数组 a 中
 
 ```bash
@@ -941,6 +944,7 @@ root x 0 0 root /root /bin/bash
 ```
 
 >systime()：返回时间戳
+>
 >strftime(format [, timestamp])：格式化时间戳
 
 ```bash
