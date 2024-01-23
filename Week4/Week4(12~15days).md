@@ -1023,7 +1023,6 @@ NwIDAQAB
 **非对称加密**
 
 ![](https://github.com/zqhgithubuser/Homework/blob/main/Week4/images/Pasted_image_20240123141229.png)
-![[Pasted image 20240123141229.png]]
 
 非对称加密算法（公钥加密算法）：每个用户都有一对加密密钥——私钥和公钥。私钥是保密的，公钥可以公开。发送方使用密钥所有者的公钥加密数据，将加密后的数据发送给密钥所有者，密钥所有者使用私钥解密数据
 
