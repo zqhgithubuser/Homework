@@ -1037,9 +1037,10 @@ NwIDAQAB
 
 **结合使用**
 
-![](https://github.com/zqhgithubuser/Homework/blob/main/Week4/images/Pasted_image_20240123151558.png)
+![](https://github.com/zqhgithubuser/Homework/blob/main/Week4/images/Pasted_image_20240124145757.png)
 
-密钥所有者使用对称密钥加密数据，使用私钥加密对称密钥，将加密数据和加密的对称密钥发送给接收方。接收方使用密钥所有者的公钥解密得到对称密钥，再使用对称密钥解密数据。这种方式的好处是可以提高解密速度
+发送方使用对称密钥加密数据，使用接收方的公钥加密对称密钥，将加密数据和加密的对称密钥发送给接收方。接收方使用自己的私钥解密得到对称密钥，再使用对称密钥解密数据。这种方式的好处是可以提高解密速度
+
 
 **数字签名**
 
