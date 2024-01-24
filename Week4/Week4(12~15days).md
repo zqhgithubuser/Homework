@@ -871,7 +871,7 @@ shutdown             nologin
 5050
 ```
 
-### 14.7 for 损坏
+### 14.7 for 循环
 
 ```bash
 [root@rocky ~]# awk 'BEGIN { sum=0; for(i=0; i<=100; i++) { sum+=i }; print sum }'
