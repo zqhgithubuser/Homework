@@ -1190,7 +1190,7 @@ num   pkts bytes target     prot opt in     out     source               destina
 
 ![](https://github.com/zqhgithubuser/Homework/blob/main/Week5/images/Pasted_image_20240128231624.png)
 
-|主角|主机名|IP 地址|
+|角色|主机名|IP 地址|
 |---|---|---|
 |防火墙|firewall|10.0.0.254, 192.168.10.111|
 |内网服务器|internal-server|10.0.0.150|
