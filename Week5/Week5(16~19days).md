@@ -994,7 +994,7 @@ www     IN      A       127.0.0.1
 Created symlink /etc/systemd/system/multi-user.target.wants/named.service → /usr/lib/systemd/system/named.service.
 ```
 
-### 12.2 客户度配置
+### 12.2 客户端配置
 
 client1
 
