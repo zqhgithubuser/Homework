@@ -1273,7 +1273,7 @@ ipv4     2 tcp      6 431997 ESTABLISHED src=192.168.10.100 dst=192.168.10.111 s
 防火墙配置，放行 80 和 90 端口的 TCP 流量
 
 ```bash
-[root@firewall ~]# iptables -t nat -A POSTROUTING -s 10.0.0.0/24 -p tcp -m multiport --dport 80,90 -j SNAT --to-source 192.168.10.111
+[root@firewall ~]# iptables -t nat -A POSTROUTING -s 10.0.0.0/24 -p tcp -m multiport --dports 80,90 -j SNAT --to-source 192.168.10.111
 
 [root@firewall ~]# iptables -t nat -nL
 Chain POSTROUTING (policy ACCEPT)
