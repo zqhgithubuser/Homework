@@ -639,6 +639,43 @@ Stopping test                                              [  OK  ]
 | `/usr/lib/systemd/system` | RPM 软件包中包含的 `systemd` 单元文件                        |
 | `/run/systemd/system`     | 系统运行过程中创建的 `systemd` 单元文件。该目录优先于 `/usr/lib/systemd/system` |
 | `/etc/systemd/system`     | 使用 `systemctl enable` 命令创建的 `systemd` 单元文件，以及用于扩展服务的单元文件。该目录优先于 `/run/systemd/system` |
+
+Unit 文件结构
+- \[Unit]：通用选项。提供 unit 描述，指定 unit 行为以及设置依赖关系
+- \[Service]：特定于类型的指令
+- \[Install]：`systemctl enable` 和 `disable` 使用的信息
+
+
+常用 \[Unit] 选项
+
+|选项|描述|
+|---|---|
+|`Description`|Unit 描述|
+|`After`|定义 unit 的启动顺序，当前 unit 在 `After` 指定的的 unit 激活后才启动，与 `Before` 选项相反|
+|`Requires`·|当前 unit 依赖的其它 unit。`Requires` 指定的任意 unit 无法被激活，当前 unit 不会被激活|
+|`Wants`|当前 unit 依赖的其它 unit。弱依赖|
+|`Conflicts`|与当前 unit 冲突的 其它 unit|
+
+常用 \[Service] 选项
+
+| 选项         | 描述                                                         |
+| ------------ | ------------------------------------------------------------ |
+| `Type`       | 影响 `ExecStart` 功能的 unit 进程启动类型<br />`simple`：默认值。`ExexStart` 启动的进程是服务的主进程<br />`forking`：`ExecStart` 启动的进程通过 spawn 产生子进程成为服务的主进程。父进程在启动完成后退出<br />`oneshot`：与 `simple` 类似，后续 unit 启动完成后退出<br />`dbus`：与 `simple` 类似，主进程获取一个 D-Bus 名称后，后续 unit 才会启动<br />`notify`：与 `simple` 类似，发送通知消息后才会启动后续 unit<br />`idle`：与 `simple` 类似，所有任务完成后才会执行 |
+| `ExecStart`  | 指定 unit 启动后执行的命令或脚本。`ExecStartPre` 和 `ExecStartPost` 指定在 `ExexStart` 、`Type=oneshot` 之前和之后执行的自定义命令 |
+| `ExecStop`   | 指定 unit 停止时执行的命令或脚本                             |
+| `ExecReload` | 指定 unit 重新加载时执行的命令或脚本                         |
+| `Restart`    | 服务进程退出后重启服务，除非使用 `systemctl` 停止            |
+
+常用 \[Install] 选项
+
+|选项|描述|
+|---|---|
+|`Alias`|unit 别名|
+|`RequiredBy`|依赖当前 unit 的其它 unit|
+|`WantedBy`|弱依赖|
+|`Also`|安装当前 unit 需要安装或卸载的其它 unit|
+
+
 ## 14. awk 工作原理及使用
 
 ### 14.1 awk 工作原理
@@ -888,9 +925,9 @@ shutdown             nologin
 4950
 ```
 
-## 15. awk 数组、函数
+## 16. awk 数组、函数
 
-### 15.1 数组
+### 16.1 数组
 
 遍历数组元素
 
@@ -915,7 +952,7 @@ shutdown             nologin
 ......
 ```
 
-### 15.2 函数
+### 16.2 函数
 
 生成随机数
 
@@ -964,16 +1001,16 @@ root x 0 0 root /root /bin/bash
 2024-01-22 22:04:36
 ```
 
-## 16. CA 管理相关工具
+## 17. CA 管理相关工具
 
-### 16.1 生成消息摘要
+### 17.1 生成消息摘要
 
 ```bash
 [root@rocky ~]# openssl dgst -sha256 /etc/passwd
 SHA256(/etc/passwd)= f71d895ba92c67f0345ca5c87cf5900f3a961114a910a91ad87d4acda2d27573
 ```
 
-### 16.2 生成 RSA 密钥
+### 17.2 生成 RSA 密钥
 
 生成私钥（使用 AES 算法加密）
 
@@ -1019,15 +1056,15 @@ NwIDAQAB
 -----END PUBLIC KEY-----
 ```
 
-## 17. 对称加密与非对称加密算法，Openssl 签发证书步骤
+## 18. 对称加密与非对称加密算法，Openssl 签发证书步骤
 
-### 17.1 对称加密算法
+### 18.1 对称加密算法
 
 ![](https://github.com/zqhgithubuser/Homework/blob/main/Week4/images/Pasted_image_20240123151729.png)
 
 对称加密算法：发送方和接收方使用相同的密钥加密和解密数据。流行的对称加密算法是 AES，包含 3 种密钥长度：AES-128、AES-192 和 AES-256
 
-### 17.2 非对称加密算法
+### 18.2 非对称加密算法
 
 **非对称加密**
 
@@ -1048,7 +1085,7 @@ NwIDAQAB
 
 非对称密钥还可以用于数字签名，验证数据的发送方以及数据的完整性。密钥所有者使用哈希函数对数据生成消息摘要，使用私钥加密消息摘要，然后将数据和加密的消息摘要发送给接收方。接收方使用密钥所有者的公钥解密加密的消息摘要，得到消息摘要，表明加密的消息摘要是由密钥所有者发送的。再使用相同的哈希函数对数据生成一个新的消息摘要，将两个消息摘要进行比较，如果完全一致，则可以验证数据的完整性
 
-### 17.3 签发证书
+### 18.3 签发证书
 
 创建所需的目录和文件
 
@@ -1178,7 +1215,7 @@ Write out database with 1 new entries
 Data Base Updated
 ```
 
-### 17.4 吊销证书
+### 18.4 吊销证书
 
 吊销证书
 
