@@ -922,6 +922,14 @@ root@mysql1:~# ls /backup
 mysql_2024-02-19
 ```
 
+创建计划任务
+
+```bash
+root@mysql1:~# crontab -l
+0 2 * * 1,5        xtrabackup --backup --target-dir=/backup/mysql_$(date +\%F)
+0 2 * * 2-4        xtrabackup --backup --incremental-basedir=/backup/mysql_$(date -d '-1 days' +\%F) --target-dir=/backup/mysql_inc_$(date +\%F)
+```
+
 插入新的记录
 
 ```mysql
@@ -940,14 +948,6 @@ mysql> SELECT * FROM host;
 |  4 | server1.example.com | 10.0.0.100 | NULL  |
 +----+---------------------+------------+-------+
 3 rows in set (0.00 sec)
-```
-
-创建计划任务
-
-```bash
-root@mysql1:~# crontab -l
-0 2 * * 1,5        xtrabackup --backup --target-dir=/backup/mysql_$(date +\%F)
-0 2 * * 2-4        xtrabackup --backup --incremental-basedir=/backup/mysql_$(date -d '-1 days' +\%F) --target-dir=/backup/mysql_inc_$(date +\%F)
 ```
 
 查看目录下是否有增量备份
